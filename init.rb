@@ -9,7 +9,7 @@ Redmine::Plugin.register :redmine_email_ticket_plugin do
   author_url 'https://github.com/Beantech0'
 end
 
-Rails.configuration.to_prepare do
+ActiveSupport.on_load(:after_initialize) do
   unless MailHandler.ancestors.include?(RedmineEmailTicketPlugin::MailHandlerPatch)
     MailHandler.prepend(RedmineEmailTicketPlugin::MailHandlerPatch)
   end
