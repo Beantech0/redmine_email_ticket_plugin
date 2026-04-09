@@ -38,6 +38,9 @@ module RedmineEmailTicketPlugin
         return
       end
 
+      # Reload the issue to get the latest lock_version and avoid stale object error
+      issue.reload
+
       custom_value = issue.custom_field_values.find { |cfv| cfv.custom_field_id == custom_field.id }
 
       if custom_value
