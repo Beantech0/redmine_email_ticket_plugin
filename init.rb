@@ -1,4 +1,4 @@
-require_dependency 'redmine_email_ticket_plugin/mail_handler_patch'
+require File.expand_path('../lib/redmine_email_ticket_plugin/mail_handler_patch', __FILE__)
 
 Redmine::Plugin.register :redmine_email_ticket_plugin do
   name 'Redmine Email Ticket Plugin'
