@@ -16,7 +16,8 @@ module RedmineEmailTicketPlugin
 
       issue
     rescue => e
-      Rails.logger.error "[RedmineEmailTicketPlugin] Error in receive_issue patch: #{e.message}\n#{e.backtrace.first(5).join(\"\n\") }"
+      backtrace = e.backtrace.first(5).join("\n")
+      Rails.logger.error "[RedmineEmailTicketPlugin] Error in receive_issue patch: #{e.message}\n#{backtrace}"
       issue
     end
 
