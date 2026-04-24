@@ -6,6 +6,8 @@ Redmine plugin, amely az e-mailből létrehozott ticketekhez elmenti a küldő e
 
 - **Küldő e-mail cím mentése**: Ticket létrehozásakor a küldő e-mail címe automatikusan bekerül a `Küldő e-mail címe` egyedi mezőbe
 - **Visszaigazoló e-mail**: A ticket létrehozása után a rendszer automatikusan visszaigazoló e-mailt küld a bejelentőnek
+- **Lezárási értesítő e-mail**: A ticket első lezárásakor a rendszer értesítőt küld a `Küldő e-mail címe` mezőben tárolt címre
+- **Biztonságos kihagyás**: Ha a `Küldő e-mail címe` mező nem létezik, nincs hozzárendelve az issue-hoz, üres vagy hibás az e-mail cím, akkor a plugin nem küld semmit
 - Hibabiztos: ha az e-mail küldés sikertelen, a ticket akkor is létrejön
 
 ## Telepítés
